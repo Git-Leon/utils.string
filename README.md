@@ -2,7 +2,7 @@
 The purpose of this repository is to
 
 ## Usage
-* This dependency is hosted on [packagecloud.io](https://packagecloud.io/git-leon/utils/packages/java/com.github.git-leon/stringutils-1.0.jar)
+* This dependency is hosted on [packagecloud.io](https://packagecloud.io/git-leon/utils/)
 
 ### Step 1 - Add Maven Repository to `pom.xml`
 * Because this dependency is hosted on a private server, not MavenCentral, the `pom.xml` must be configured to search in the proper repository.
