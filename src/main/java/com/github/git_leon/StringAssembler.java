@@ -16,7 +16,7 @@ public class StringAssembler {
         this.sb = new StringBuilder();
     }
 
-    public StringAssembler append(Object s, String... args) {
+    public StringAssembler append(Object s, Object... args) {
         sb.append(String.format(s.toString(), args) + delimitingValue);
         return this;
     }

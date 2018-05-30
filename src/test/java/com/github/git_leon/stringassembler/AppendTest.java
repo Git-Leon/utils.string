@@ -4,6 +4,7 @@ import com.github.git_leon.StringAssembler;
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.MissingFormatArgumentException;
 
 /**
@@ -38,6 +39,10 @@ public class AppendTest {
         Assert.assertEquals(expected, actual);
     }
 
+    @Test(expected = IOException.class)
+    public void methodThatThrowsExceptionTest() throws IOException {
+        throw new IOException();
+    }
 
     @Test
     public void appendWithFormattingHelloWorld() {

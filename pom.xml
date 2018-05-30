@@ -6,7 +6,7 @@
 
     <groupId>com.github.git_leon</groupId>
     <artifactId>stringutils</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <build>
         <plugins>
             <plugin>
