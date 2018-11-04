@@ -19,7 +19,7 @@ public final class StringUtils {
 
     /**
      * @param string value to be padded
-     * @param n amount of padding
+     * @param n      amount of padding
      * @return string with left padding
      */
     public static String padLeft(String string, int n) {
@@ -28,7 +28,7 @@ public final class StringUtils {
 
     /**
      * @param string value to be padded
-     * @param n amount of padding
+     * @param n      amount of padding
      * @return string with right padding
      */
     public static String padRight(String string, int n) {
@@ -36,10 +36,10 @@ public final class StringUtils {
     }
 
 
-
     /**
      * removes all specified `removable` characters from base String
-     * @param original string to have characters removed from
+     *
+     * @param original       string to have characters removed from
      * @param removableChars characters to remove from string
      * @return identical string with each of the `removableChars` removed
      */
@@ -48,7 +48,7 @@ public final class StringUtils {
     }
 
     /**
-     * @param baseString value to have characters removed from
+     * @param baseString       value to have characters removed from
      * @param removableStrings sub-strings to remove from base string
      * @return identical string with each of the sub-strings removed
      */
@@ -61,7 +61,7 @@ public final class StringUtils {
 
     /**
      * @param str value to be repeated
-     * @param n number of times to repeat value
+     * @param n   number of times to repeat value
      * @return input `str` value concatenated `n` number of times
      */
     public static String repeatString(String str, int n) {
@@ -76,7 +76,7 @@ public final class StringUtils {
      * @param number value to get alpha-representation of
      * @return alpha representation of specified integer
      */
-    public static String getAlphaValue(long number) {
+    public static String getValue(long number) {
         StringBuilder sb = new StringBuilder();
         while (number-- > 0) {
             sb.append((char) ('a' + (number % 26)));
@@ -96,4 +96,23 @@ public final class StringUtils {
         }
         return sb.toString();
     }
+
+    public static String replaceNthSubstring(String baseString, String subStringToRemove, int nthOccurrence) {
+        int startIndex = getIndexOfNthSubstring(baseString, subStringToRemove, nthOccurrence);
+        int endIndex = startIndex + subStringToRemove.length();
+
+        String prefix = baseString.substring(0, startIndex);
+        String suffix = baseString.substring(endIndex);
+        return prefix + suffix;
+    }
+
+
+    public static int getIndexOfNthSubstring(String baseString, String subStringToRemove, int nthOccurrence) {
+        int pos = baseString.indexOf(subStringToRemove);
+        while (--nthOccurrence > 0 && pos != -1)
+            pos = baseString.indexOf(subStringToRemove, pos + 1);
+        return pos;
+    }
+
+
 }

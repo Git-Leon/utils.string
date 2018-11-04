@@ -15,7 +15,7 @@ public class GetAlphaValueTest {
         String expected = "a";
 
         // When
-        String actual = StringUtils.getAlphaValue(valueToConvert);
+        String actual = StringUtils.getValue(valueToConvert);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -28,7 +28,7 @@ public class GetAlphaValueTest {
         String expected = "b";
 
         // When
-        String actual = StringUtils.getAlphaValue(valueToConvert);
+        String actual = StringUtils.getValue(valueToConvert);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -41,7 +41,7 @@ public class GetAlphaValueTest {
         String expected = "z";
 
         // When
-        String actual = StringUtils.getAlphaValue(valueToConvert);
+        String actual = StringUtils.getValue(valueToConvert);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -54,7 +54,7 @@ public class GetAlphaValueTest {
         String expected = "y";
 
         // When
-        String actual = StringUtils.getAlphaValue(valueToConvert);
+        String actual = StringUtils.getValue(valueToConvert);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -68,7 +68,7 @@ public class GetAlphaValueTest {
         String expected = "aa";
 
         // When
-        String actual = StringUtils.getAlphaValue(valueToConvert);
+        String actual = StringUtils.getValue(valueToConvert);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -81,7 +81,7 @@ public class GetAlphaValueTest {
         String expected = "ab";
 
         // When
-        String actual = StringUtils.getAlphaValue(valueToConvert);
+        String actual = StringUtils.getValue(valueToConvert);
 
         // Then
         Assert.assertEquals(expected, actual);
@@ -94,7 +94,7 @@ public class GetAlphaValueTest {
         String expected = "az";
 
         // When
-        String actual = StringUtils.getAlphaValue(valueToConvert);
+        String actual = StringUtils.getValue(valueToConvert);
 
         // Then
         Assert.assertEquals(expected, actual);
