@@ -97,9 +97,15 @@ public final class StringUtils {
         return sb.toString();
     }
 
-    public static String replaceNthSubstring(String baseString, String subStringToRemove, int nthOccurrence) {
-        int startIndex = getIndexOfNthSubstring(baseString, subStringToRemove, nthOccurrence);
-        int endIndex = startIndex + subStringToRemove.length();
+    /**
+     * @param baseString string to be operated on
+     * @param substringToRemove string to be removed from `baseString`
+     * @param nthOccurrence the index of the sub string to be removed
+     * @return string with the `nthOccurrence` of the specified `subStringToRemove` removed
+     */
+    public static String replaceNthSubstring(String baseString, String substringToRemove, int nthOccurrence) {
+        int startIndex = getIndexOfNthSubstring(baseString, substringToRemove, nthOccurrence);
+        int endIndex = startIndex + substringToRemove.length();
 
         String prefix = baseString.substring(0, startIndex);
         String suffix = baseString.substring(endIndex);
@@ -107,11 +113,48 @@ public final class StringUtils {
     }
 
 
-    public static int getIndexOfNthSubstring(String baseString, String subStringToRemove, int nthOccurrence) {
-        int pos = baseString.indexOf(subStringToRemove);
+    /**
+     * @param baseString string to be operated on
+     * @param substringToRemove string to be removed from `baseString`
+     * @return string with the last occurrence of the specified `subStringToRemove` removed
+     */
+    public static String replaceLastSubString(String baseString, String substringToRemove) {
+        return replaceNthSubstring(
+                baseString,
+                substringToRemove,
+                getNumberOfOccurrences(baseString, substringToRemove));
+    }
+
+    /**
+     * @param baseString string to be operated on
+     * @param substring substring to be evaluated from `baseString`
+     * @param nthOccurrence the index of the sub string to be removed
+     * @return index of the `nthOccurrence` of the specified `substring` removed
+     */
+    public static int getIndexOfNthSubstring(String baseString, String substring, int nthOccurrence) {
+        int pos = baseString.indexOf(substring);
         while (--nthOccurrence > 0 && pos != -1)
-            pos = baseString.indexOf(subStringToRemove, pos + 1);
+            pos = baseString.indexOf(substring, pos + 1);
         return pos;
+    }
+
+    /**
+     * @param baseString string to be operated on
+     * @param substring substring to be evaluated from `baseString`
+     * @return number of occurrences of the specified `substring`
+     */
+    public static int getNumberOfOccurrences(String baseString, String substring) {
+        int lastIndex = 0;
+        int count = 0;
+
+        while (lastIndex != -1) {
+            lastIndex = baseString.indexOf(substring, lastIndex);
+            if (lastIndex != -1) {
+                count++;
+                lastIndex += substring.length();
+            }
+        }
+        return count;
     }
 
 
