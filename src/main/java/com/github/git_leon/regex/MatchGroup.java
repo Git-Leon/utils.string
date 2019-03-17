@@ -23,11 +23,6 @@ public class MatchGroup extends ListFacade<Match> {
         return matcher;
     }
 
-    @Override
-    public String toString() {
-        return toList().toString();
-    }
-
     private void initializeMatchers() {
         for (int i = 0; matcher.find(); i++) {
             super.add(new MatchBuilder()
