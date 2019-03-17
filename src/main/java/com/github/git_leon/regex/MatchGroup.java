@@ -23,10 +23,6 @@ public class MatchGroup extends ListFacade<Match> {
         return matcher;
     }
 
-    public List<Match> toList() {
-        return super.toList();
-    }
-
     @Override
     public String toString() {
         return toList().toString();
