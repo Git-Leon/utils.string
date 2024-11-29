@@ -1,4 +1,4 @@
-package com.github.git_leon;
+package com.github.git_leon.utils.string;
 
 /**
  * Created by leon on 5/25/17.

@@ -1,6 +1,6 @@
-package com.github.git_leon.stringutils;
+package com.github.git_leon.utils.string.stringutils;
 
-import com.github.git_leon.StringUtils;
+import com.github.git_leon.utils.string.StringUtils;
 import org.junit.Assert;
 import org.junit.Test;
 

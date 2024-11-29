@@ -1,6 +1,6 @@
-package com.github.git_leon.stringassembler;
+package com.github.git_leon.utils.string.stringassembler;
 
-import com.github.git_leon.StringAssembler;
+import com.github.git_leon.utils.string.StringAssembler;
 import org.junit.Assert;
 import org.junit.Test;
 

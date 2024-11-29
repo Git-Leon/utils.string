@@ -1,4 +1,4 @@
-package com.github.git_leon.regex;
+package com.github.git_leon.utils.string.regex;
 
 import org.junit.Assert;
 import org.junit.Test;

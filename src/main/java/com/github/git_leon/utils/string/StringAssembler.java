@@ -1,4 +1,4 @@
-package com.github.git_leon;
+package com.github.git_leon.utils.string;
 
 /**
  * @author leon on 5/26/18.

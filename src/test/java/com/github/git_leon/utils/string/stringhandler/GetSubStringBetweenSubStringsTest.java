@@ -1,6 +1,6 @@
-package com.github.git_leon.stringhandler;
+package com.github.git_leon.utils.string.stringhandler;
 
-import com.github.git_leon.StringHandler;
+import com.github.git_leon.utils.string.StringHandler;
 import org.junit.Assert;
 import org.junit.Test;
 

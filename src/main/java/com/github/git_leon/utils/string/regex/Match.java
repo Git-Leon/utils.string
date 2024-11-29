@@ -1,4 +1,4 @@
-package com.github.git_leon.regex;
+package com.github.git_leon.utils.string.regex;
 
 public class Match {
     private String value;

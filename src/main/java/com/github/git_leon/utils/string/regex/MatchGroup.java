@@ -1,12 +1,10 @@
-package com.github.git_leon.regex;
-
-import com.github.git_leon.collectionutils.ListFacade;
+package com.github.git_leon.utils.string.regex;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;
 
-public class MatchGroup extends ListFacade<Match> {
+public class MatchGroup extends ArrayList<Match> {
     private final Matcher matcher;
 
     public MatchGroup(List<Match> matchList, Matcher matcher) {
@@ -25,17 +23,12 @@ public class MatchGroup extends ListFacade<Match> {
 
     @Override
     public String toString() {
-        return toList().toString();
+        return new ArrayList<>(this).toString();
     }
 
     private void initializeMatchers() {
         for (int i = 0; matcher.find(); i++) {
-            super.add(new MatchBuilder()
-                    .setStartingIndex(matcher.start())
-                    .setEndingIndex(matcher.end())
-                    .setValue(matcher.group())
-                    .setMatchNumber(i)
-                    .build());
+            super.add(new MatchBuilder().setStartingIndex(matcher.start()).setEndingIndex(matcher.end()).setValue(matcher.group()).setMatchNumber(i).build());
         }
     }
 }
